@@ -47,3 +47,28 @@ So, now the problems are:
 1. Why are we getting intermittent readings in some configurations?
 2. Why do we receive 0s on some bits in the byte when the corresponding inputs are pulled HIGH?
 3. Why is the seventh bit ALWAYS 1?
+
+With even more tinkering we get these results:
+
+This time we start with all inputs on the shift register pulled LOW, then individually pull each input HIGH.
+
+All LOW = 00000000
+
+D0 HIGH = 10000000
+
+D1 HIGH = 01000000
+
+D2 HIGH = 00100000
+
+D3 HIGH = 00010000
+
+D4 HIGH = 10001000
+
+D5 HIGH = 00100100
+
+D6 HIGH = 10101010
+
+D7 HIGH = 11111111
+
+So what did we change to get these latest results?
+We have changed the SPI_MODE and set the bit order back to MSBFIRST. On the previous test we had the bit order set to LSBFIRST and we also had SPI_MODE0 set. After testing, SPI_MODE0, SPI_MODE1 and SPI_MODE3 yielded the same results, but changing to SPI_MODE2 gave us these new results, which are much nearer to our goal.
