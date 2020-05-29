@@ -74,7 +74,7 @@ All bits are steady - no intermittent results
 
 So what did we change to get these latest results?
 
-We have changed the SPI_MODE and set the bit order back to MSBFIRST.
+We have changed the SPI_MODE and set the bit order back to MSBFIRST. We have also changed the delay between the begin and end transaction statements to a microsecond delay, as the ESP32 runs much faster than the Arduino. 
 
 On the previous test we had the bit order set to LSBFIRST and we also had SPI_MODE0 set. After testing, SPI_MODE0, SPI_MODE1 and SPI_MODE3 yielded the same results, but changing to SPI_MODE2 gave us these new results, which are much nearer to our goal.
 
