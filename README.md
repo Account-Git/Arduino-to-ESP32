@@ -30,11 +30,17 @@ With D7 pulled LOW, we receive a byte of: 11111110, although the 0 on the eighth
 If we keep D7 pulled LOW and then individually cycle through the other inputs again we get:
 
 D7 + D0 LOW = 11111110 (0 is intermittent)
+
 D7 + D1 LOW = 11111011 (0 is steady)
+
 D7 + D2 LOW = 11110111 (0 is steady)
+
 D7 + D3 LOW = 11101110 (0s are steady)
+
 D7 + D4 LOW = 11011011 (0s are steady)
+
 D7 + D5 LOW = 10101010 (first three 0s are intermittent, bit eight 0 is steady)
+
 D7 + D6 LOW = 01111110 (bit one 0 is intermittent, bit eight 0 is steady)
 
 So, now the problems are:
