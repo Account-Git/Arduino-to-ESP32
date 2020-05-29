@@ -46,3 +46,4 @@ D7 + D6 LOW = 01111110 (bit one 0 is intermittent, bit eight 0 is steady)
 So, now the problems are:
 1. Why are we getting intermittent readings in some configurations?
 2. Why do we receive 0s in the byte when the corresponding inputs are still HIGH?
+3. Bit 7 is ALWAYS 1.
