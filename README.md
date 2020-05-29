@@ -24,7 +24,7 @@ After lots of tinkering I have now added a new sketch to this repository, NEW-ES
 The SPI transfer is still not working correctly, but progress has been made.
 Here are the results from the new sketch:
 
-With all input pins (D0-D7) pulled HIGH, we receive a byte of: 11111111
+With all input pins (D0-D7) on the 74HC165 pulled HIGH, we receive a byte of: 11111111
 If we (individually) pull each input pin LOW there is no change to the byte received, except for on the last pin (D7).
 With D7 pulled LOW, we receive a byte of: 11111110, although the 0 on the eighth bit is intermittent.
 If we keep D7 pulled LOW and then individually cycle through the other inputs again we get:
