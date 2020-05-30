@@ -52,23 +52,23 @@ With even more tinkering we get these results:
 
 This time we start with all inputs on the shift register pulled LOW, then individually pull each input HIGH.
 
-All LOW = 00000000    - Correct
+All LOW = 00000000 (correct)
 
-D0 HIGH = 10000000    - Correct
+D0 HIGH = 10000000 (correct)
 
-D1 HIGH = 01000000    - Correct
+D1 HIGH = 01000000 (correct)
 
-D2 HIGH = 00100000    - Correct
+D2 HIGH = 00100000 (correct)
 
-D3 HIGH = 00010000    - Correct
+D3 HIGH = 00010000 (correct)
 
-D4 HIGH = 10001000
+D4 HIGH = 01001000 (extra HIGH at position 1)
 
-D5 HIGH = 00100100
+D5 HIGH = 01010100 (extra HIGH at positions 1 and 3)
 
-D6 HIGH = 10101010
+D6 HIGH = 00000010 (correct)
 
-D7 HIGH = 11111111
+D7 HIGH = 11111111 (extra HIGH at positions 0, 1, 2, 3, 4, 5, 6)
 
 All bits are steady - no intermittent results
 
