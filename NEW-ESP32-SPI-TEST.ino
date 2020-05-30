@@ -11,7 +11,6 @@ byte SftRegister;
 void setup() {
   FastLED.addLeds<NEOPIXEL, LEDDataPin>(led, 8);
   FastLED.setBrightness(50);
-//  SPI.begin(18, 19, -1, 5); //SCK, MISO, MOSI, SS
   SPI.begin();
   pinMode(SftLoadPin, OUTPUT);
   digitalWrite(SftLoadPin, 1);
@@ -39,7 +38,3 @@ void loop() {
   }
   FastLED.delay(500);
 } //End Loop
-
-//SPI.transfer(chipcontrol);
-//SPI.transfer(adcswrre);
-//SPI.transfer(dataspi);
